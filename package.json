@@ -1,0 +1,17 @@
+{
+  "name": "depinfo",
+  "version": "0.0.1",
+  "description": "Quickly retrieve basic information about your node project dependencies",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "ncronquist",
+  "license": "MIT",
+  "preferGlobal": "true",
+  "directories": {
+    "bin": "./bin"
+  },
+  "dependencies": {
+    "underscore": "^1.8.3"
+  }
+}
