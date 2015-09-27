@@ -1,6 +1,6 @@
 {
   "name": "depinfo",
-  "version": "0.0.1",
+  "version": "0.1.0",
   "description": "Quickly retrieve basic information about your node project dependencies",
   "repository": {
     "type": "git",
