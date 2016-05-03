@@ -9,7 +9,7 @@ npm install -g depinfo
 
 ## Usage
 
-From the root of your project directory (where your package.json file and node_modules folder are located), run the following command. This will create a file root of your project called **dependencies.md**.
+From the root of your project directory (where your package.json file and node_modules folder are located), run the following command. This will create a file at the root of your project called **dependencies.md**.
 
 ```
 depinfo
