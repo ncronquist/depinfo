@@ -1,6 +1,6 @@
 {
   "name": "depinfo",
-  "version": "0.2.6",
+  "version": "0.2.7",
   "description": "Quickly retrieve basic information about your node project dependencies formatted as a Markdown table",
   "repository": {
     "type": "git",
