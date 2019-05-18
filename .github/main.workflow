@@ -11,8 +11,13 @@ action "Build" {
   args = "install --frozen-lockfile"
 }
 
+action "Filter-Deleted-Branches" {
+  uses = "actions/bin/filter@master"
+  args = "not deleted_branch"
+}
+
 action "Test" {
-  needs = "Build"
+  needs = ["Build", "Filter-Deleted-Branches"]
   uses = "docker://node:10-alpine"
   runs = "yarn"
   args = "test"
