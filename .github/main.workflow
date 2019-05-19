@@ -5,19 +5,20 @@ workflow "CI" {
   on = "push"
 }
 
+action "Is-Not-Deleted?" {
+  uses = "actions/bin/filter@master"
+  args = "not deleted"
+}
+
 action "Build" {
+  needs = "Is-Not-Deleted?"
   uses = "docker://node:10-alpine"
   runs = "yarn"
   args = "install --frozen-lockfile"
 }
 
-action "Filter-Deleted-Branches" {
-  uses = "actions/bin/filter@master"
-  args = "not deleted_branch"
-}
-
 action "Test" {
-  needs = ["Build", "Filter-Deleted-Branches"]
+  needs = "Build"
   uses = "docker://node:10-alpine"
   runs = "yarn"
   args = "test"
